@@ -1,0 +1,77 @@
+@mixin breakpoint-max($bp:0) {
+    @media (max-width: $bp) {
+        @content
+    }
+}
+
+;
+
+@mixin breakpoint-min($bp:0) {
+    @media (min-width: $bp) {
+        @content
+    }
+}
+
+;
+
+@mixin flex($align:center, $direction:row, $justify:center) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+;
+
+@mixin equal($h-w:0) {
+    height: $h-w;
+    width: $h-w;
+}
+
+;
+
+:root {
+    --background: hwb(0 95% 5%);
+    // --d-background: rgba(150, 100, 220, 0.1) !important;
+}
+
+// fonts
+$poppins: 'Poppins',
+sans-serif;
+$syne:'Syne',
+sans-serif;
+$zen: 'Zen Dots',
+cursive;
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    background: var(--d-background);
+}
+
+body {
+    background-color: var(--background);
+    position: relative;
+
+    &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+
+    @include breakpoint-max(760px) {
+        display: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
