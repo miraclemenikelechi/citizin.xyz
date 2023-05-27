@@ -1,5 +1,6 @@
 import "./landing.scss";
 import { LogoDark, LandingArrow } from "../../assets/icons";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
 
@@ -47,7 +48,7 @@ const Landing = () => {
                     <ul>
                         {links.map((link, index) => (
                             <li key={index}>
-                                <a href={link.href}>{link.text}</a>
+                                <Link to={link.href}>{link.text}</Link>
                             </li>
                         ))}
                     </ul>
@@ -104,9 +105,9 @@ const Landing = () => {
 
                 <div>
                     <button>
-                        <a href={"/explore"}>
+                        <Link to={"/explore"}>
                             enter dapp
-                        </a>
+                        </Link>
                     </button>
 
                     <p>
