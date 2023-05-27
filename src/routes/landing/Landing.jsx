@@ -104,7 +104,7 @@ const Landing = () => {
 
                 <div>
                     <button>
-                        <a href="/explore">
+                        <a href={"/explore"}>
                             enter dapp
                         </a>
                     </button>
