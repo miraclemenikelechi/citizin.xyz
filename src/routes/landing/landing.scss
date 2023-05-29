@@ -75,6 +75,7 @@
                 width: min(100%, 1488px);
                 z-index: -1;
                 margin-top: 86px;
+                opacity: .25;
 
                 figure {
                     --border-width: 2px;
@@ -126,7 +127,12 @@
                     font-size: 3.4375rem;
                     width: 1265px;
                     text-align: center;
-                    background: linear-gradient(116.65deg, #ACE690 33.29%, rgba(197, 229, 138, 0.82) 53.05%, #848DFF 79.23%, rgba(202, 216, 118, 0) 116.48%, #898DDB 116.48%);
+                    background: linear-gradient(116.65deg,
+                            hwb(100 56% 10%) 33.29%,
+                            hwb(81 54% 10% / 0.82) 53.05%,
+                            hwb(236 52% 0%) 79.23%,
+                            hwb(69 46% 15% / 0) 116.48%,
+                            hwb(237 54% 14%) 116.48%);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     background-clip: text;
@@ -136,14 +142,24 @@
                     @include flex;
                     gap: 2.5rem;
 
-                    >span {
+                    a {
                         @include flex;
                         @include equal(125px);
                         position: relative;
                         border: 3px solid hwb(234 62% 17%);
                         border-radius: 50%;
 
+                        &:hover {
+                            animation: spin 1000ms;
+                            cursor: pointer;
+
+                            span {
+                                left: -2px;
+                            }
+                        }
+
                         span {
+                            transition: all .5s ease;
                             border-radius: inherit;
                             @include equal(inherit);
                             @include flex;
@@ -238,6 +254,36 @@
                 border-radius: 2.1875rem;
                 border: none;
                 outline: none;
+                position: relative;
+                isolation: isolate;
+                overflow: hidden;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background-color: hwb(101 54% 4%);
+                    width: 10%;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                    inset: 0;
+                    margin: auto;
+                    z-index: -1;
+                    opacity: 0;
+                }
+
+                &:hover::after {
+                    scale: 20;
+                    transition: .5s;
+                    opacity: 1;
+                }
+
+                &:has(:first-child:hover)::after {
+                    margin-left: 0;
+                }
+
+                &:has(:last-child:hover)::after {
+                    margin-right: 0;
+                }
 
                 a {
                     @include flex;
@@ -246,6 +292,24 @@
                     font-size: 1.875rem;
                     text-transform: capitalize;
                     font-family: $syne;
+                }
+
+                span {
+                    position: absolute;
+                    top: 0;
+                    height: 100%;
+                    width: 33%;
+                    background-color: transparent;
+                    opacity: .5;
+                    cursor: pointer;
+
+                    &:first-of-type {
+                        left: 0;
+                    }
+
+                    &:last-of-type {
+                        right: 0;
+                    }
                 }
             }
 

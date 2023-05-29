@@ -78,9 +78,9 @@ const Landing = () => {
                         </h1>
 
                         <div>
-                            <span>
+                            <Link>
                                 <span><LandingArrow /></span>
-                            </span>
+                            </Link>
 
                             <p>
                                 Promoting community engagement in DAO governance and
@@ -105,9 +105,13 @@ const Landing = () => {
 
                 <div>
                     <button>
+
+                        <span></span>
                         <Link to={"/explore"}>
                             enter dapp
                         </Link>
+                        <span></span>
+
                     </button>
 
                     <p>

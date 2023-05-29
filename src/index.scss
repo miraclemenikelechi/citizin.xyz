@@ -54,6 +54,7 @@ cursive;
 body {
     background-color: var(--background);
     position: relative;
+    zoom: 80%;
 
     &::-webkit-scrollbar {
         width: 0px;
