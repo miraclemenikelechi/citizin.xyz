@@ -8,7 +8,7 @@ function App() {
 		UiLayout = () => {
 			return (
 				<>
-					{/* <Scroll /> */}
+					<Scroll />
 					<MainUI />
 					<Outlet />
 				</>
