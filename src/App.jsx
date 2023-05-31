@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import { MainUI, Scroll } from "./utils";
+import { MainUI } from "./utils";
 import { Landing, Explore } from "./routes";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
 		UiLayout = () => {
 			return (
 				<>
-					<Scroll />
+					{/* <Scroll /> */}
 					<MainUI />
 					<Outlet />
 				</>
