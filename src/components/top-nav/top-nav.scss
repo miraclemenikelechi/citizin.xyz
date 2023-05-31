@@ -5,6 +5,10 @@
     padding-inline: 2.5%;
     border-bottom: 1px solid hwb(0 85% 15%);
     background-color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 5;
 
     >div {
         @include flex($justify:space-between);
@@ -16,6 +20,8 @@
                 gap: .5rem;
 
                 span {
+                    @include flex;
+
                     &:last-of-type {
                         font-family: $syne;
                         font-weight: 600;
@@ -30,7 +36,7 @@
             @include flex;
             gap: 4.7rem;
             text-transform: capitalize;
-            font-family: $poppins;
+            font-family: $axiforma;
             margin-right: auto;
             padding-left: 180px;
 
@@ -65,7 +71,7 @@
                 gap: 1rem;
 
                 @include breakpoint-max(1300px) {
-                    display: none
+                    // display: none
                 }
 
                 span {

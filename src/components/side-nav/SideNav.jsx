@@ -42,42 +42,42 @@ const SideNav = () => {
                 side: < ProposalDropdown />
             },
             {
-                to: "/",
+                to: "/create",
                 text: `create proposal`,
                 icon: <CreateProposal />
             },
             {
-                to: "/",
+                to: "/past",
                 text: `past proposals`,
                 icon: <PastProposal />
             },
             {
-                to: "/",
+                to: "/active",
                 text: `active proposals`,
                 icon: <ActiveProposal />
             },
             {
-                to: "/",
+                to: "/analytics",
                 text: `analytics`,
                 icon: <Analytics />
             },
             {
-                to: "/",
+                to: "/dao",
                 text: `DAO metrics`,
                 icon: <DAO />
             },
             {
-                to: "/",
+                to: "/community",
                 text: `community`,
                 icon: <Community />
             },
             {
-                to: "/",
+                to: "/create-dao",
                 text: `create DAO`,
                 icon: <CreateDAO />
             },
             {
-                to: "/",
+                to: "/other",
                 text: `other`,
                 icon: <Other />
             },

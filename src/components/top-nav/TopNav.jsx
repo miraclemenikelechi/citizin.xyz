@@ -30,7 +30,7 @@ const TopNav = () => {
                 <div className="logo">
                     <Link>
                         <span><Logo /></span>
-                        <span>citizin.xyz</span>
+                        <span>citizin</span>
                     </Link>
                 </div>
 

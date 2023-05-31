@@ -1,6 +1,8 @@
 import "./landing.scss";
 import { LogoDark, LandingArrow } from "../../assets/icons";
 import { Link } from "react-router-dom";
+import { Scroll } from "../../utils";
+
 
 const Landing = () => {
 
@@ -37,6 +39,8 @@ const Landing = () => {
 
     return (
         <section className="landing">
+            <Scroll />
+
             <div className="navigation">
 
                 <div className="logo">

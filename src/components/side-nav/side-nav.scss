@@ -3,14 +3,13 @@
 
 .sideNav {
     width: 360px;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
-    height: 100vh;
+    height: 100%;
     padding-top: 80px;
     z-index: -1;
     background-color: white;
-    overflow: hidden;
 
     >div {
         padding: 50px;
@@ -104,15 +103,10 @@
         .bottom {
             width: 100%;
             overflow-y: scroll;
-            height: 45vh;
 
             &::-webkit-scrollbar {
                 width: 0px;
                 background: transparent;
-            }
-
-            @include breakpoint-max(1300px) {
-                height: 40vh;
             }
 
             ul {
@@ -126,7 +120,7 @@
                     color: hwb(0 62% 38%);
                     position: relative;
 
-                    // &.active,
+                    &.active,
                     &:hover {
                         color: hwb(215 12% 2%);
 

@@ -252,4 +252,16 @@ export const
                 <path d="M34.4896 1.82909L35.3164 20.9816M1.92034 34.2055L34.4896 1.82909L1.92034 34.2055ZM34.4896 1.82909L16.2645 1.81622L34.4896 1.82909Z" stroke="#1B1B1B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         );
-    };
+    },
+
+    ArrowRight = () => {
+        return (
+            <svg width="35" height="28" viewBox="0 0 35 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.5 12H17" stroke="#1F7AFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12.9117 8L17.5 12L12.9117 16" stroke="#0095FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        );
+    }
+
+
+    ;

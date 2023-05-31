@@ -4,6 +4,7 @@
 .ui-cards {
     position: absolute;
     right: 0;
+    top: 80px;
     width: calc(100% - 360px);
     padding: 50px;
 
@@ -144,10 +145,6 @@
                 @include flex;
                 pointer-events: none;
                 opacity: 15%;
-
-                @include breakpoint-max(1300px) {
-                    display: none;
-                }
 
                 &:nth-of-type(1) {
                     @include equal(111px);
