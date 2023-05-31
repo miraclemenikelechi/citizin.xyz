@@ -1,5 +1,5 @@
 import MainUI from "./mainUI/MainUI";
-import Scroll from "./scrollReset/scroll";
+import Scroll from "./scrollReset/Scroll";
 
 export {
     MainUI,
