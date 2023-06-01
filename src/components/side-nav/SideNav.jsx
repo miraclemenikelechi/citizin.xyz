@@ -67,7 +67,7 @@ const SideNav = () => {
                 icon: <DAO />
             },
             {
-                to: "/community",
+                to: "/communities",
                 text: `community`,
                 icon: <Community />
             },

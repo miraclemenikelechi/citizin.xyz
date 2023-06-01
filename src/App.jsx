@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import { MainUI, Scroll  } from "./utils";
-import { Landing, Explore } from "./routes";
+import { MainUI, Scroll } from "./utils";
+import { Landing, Explore, Community } from "./routes";
 
 function App() {
 
@@ -29,7 +29,12 @@ function App() {
 					{
 						path: "/explore",
 						element: <Explore />
-					}
+					},
+
+					{
+						path: `/communities`,
+						element: <Community />
+					},
 				]
 			},
 		]);
