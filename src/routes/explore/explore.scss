@@ -61,7 +61,7 @@
                 grid-column-gap: 50px;
                 place-items: center;
 
-                .card {
+                .card>a {
                     height: 220px;
                     width: min(100%, 455px);
                     padding: 1.25rem;
@@ -69,6 +69,11 @@
                     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
                     border-radius: .625rem;
                     @include flex($direction:column);
+                    transition: ease-in-out all 150ms;
+
+                    &:hover {
+                        scale: 1.05
+                    }
 
                     >div {
                         @include flex;
@@ -112,7 +117,7 @@
                             align-items: flex-start;
                             gap: .625rem;
 
-                            span {
+                            >span {
                                 font-family: $syne;
                                 font-weight: 500;
 
@@ -127,6 +132,13 @@
                                     overflow: hidden;
                                     text-overflow: ellipsis;
                                     max-height: 1.875rem;
+                                }
+
+                                span {
+                                    color: inherit;
+                                    font-size: inherit;
+                                    font-weight: inherit;
+                                    font-family: inherit;
                                 }
                             }
                         }

@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { MainUI, Scroll } from "./utils";
-import { Landing, Explore, Community } from "./routes";
+import { Landing, Explore, Community, Vote } from "./routes";
 
 function App() {
 
@@ -29,6 +29,16 @@ function App() {
 					{
 						path: "/explore",
 						element: <Explore />
+					},
+
+					{
+						path: "/active/vote/:id",
+						element: <Vote />
+					},
+
+					{
+						path: "/past/vote/:id",
+						element: <Vote />
 					},
 
 					{

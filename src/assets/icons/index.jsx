@@ -263,6 +263,15 @@ export const
         );
     },
 
+    ArrowLeft = () => {
+        return (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5 12L7 12" stroke="#363853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M11.0883 16L6.50002 12L11.0883 8" stroke="#0095FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        );
+    },
+
     CommunityIcon = () => {
         return (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -274,7 +283,23 @@ export const
                 <path d="M3.32156 13.5126C2.21752 13.7297 1.49225 14.1718 1.19139 14.8166C0.936203 15.3453 0.936203 15.9585 1.19139 16.4872C1.65163 17.485 3.13531 17.8065 3.71195 17.8884C3.83104 17.9065 3.92595 17.8038 3.91342 17.6831C3.61883 14.9166 5.9621 13.6045 6.56918 13.3028C6.59425 13.2884 6.59962 13.2677 6.59694 13.2542C6.59515 13.2452 6.5853 13.2317 6.5656 13.2299C5.25294 13.2046 3.84358 13.3848 3.32156 13.5126Z" fill="black" />
             </svg>
         );
-    }
+    },
 
+    Unchecked = () => {
+        return (
+            <svg width="44" height="43" viewBox="0 0 44 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="44" height="43" rx="21.5" fill="#BBC1C4" fill-opacity="0.2" />
+                <rect x="1" y="1" width="42" height="41" rx="20.5" stroke="#1F7AFA" stroke-opacity="0.56" stroke-width="2" />
+            </svg>
+        );
+    },
 
-    ;
+    Checked = () => {
+        return (
+            <svg width="44" height="43" viewBox="0 0 44 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="21.5" cy="21.5" r="9.5" fill="#3464C1" fill-opacity="0.62" />
+                <rect width="44" height="43" rx="21.5" fill="#BBC1C4" fill-opacity="0.2" />
+                <rect x="1" y="1" width="42" height="41" rx="20.5" stroke="#1F7AFA" stroke-opacity="0.56" stroke-width="2" />
+            </svg>
+        );
+    };

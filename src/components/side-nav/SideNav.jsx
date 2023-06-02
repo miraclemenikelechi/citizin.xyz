@@ -67,6 +67,11 @@ const SideNav = () => {
                 icon: <DAO />
             },
             {
+                to: "/graph",
+                text: `vote graph`,
+                icon: <VoteGraph />
+            },
+            {
                 to: "/communities",
                 text: `community`,
                 icon: <Community />

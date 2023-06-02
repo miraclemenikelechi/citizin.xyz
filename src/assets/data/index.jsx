@@ -50,14 +50,14 @@ export const
         },
     ],
 
-
+    // ! <====================== new object here! ==========================>
 
     cards = [
         {
             id: 0,
             img: "/multidao.png",
             company: "Multichain",
-            title: `MultiBTC Adoption Prop...`,
+            title: `MultiBTC Adoption Proposal`,
             text: `A decentralized autonomous organization building multichain verse merging for all ecosystem and blockchains. We are the lea...`,
             status: {
                 active: true,
@@ -73,15 +73,32 @@ export const
                     "/profile-2.jpg",
                     "/profile-3.jpg",
                     "/profile-4.jpg",
-                ]
-            }
+                ],
+                proposals: [
+                    {
+                        q: `I agree to metaguild building a metaverse`,
+                        v: 183,
+                        c: "E03D3D"
+                    },
+                    {
+                        q: `I disagree to metaguild building a metaverse`,
+                        v: 235,
+                        c: "3DE04D"
+                    },
+                    {
+                        q: `Let’s build one but on private beta`,
+                        v: 121,
+                        c: "4A3DE0"
+                    }
+                ],
+            },
         },
 
         {
             id: 1,
             img: "/wireshape.png",
             company: "Wireshape DAO",
-            title: `Treasury Proposa...`,
+            title: `Treasury Proposal`,
             text: `Modern product information standard to drive the creation of the new generation of decentralized ecommecers through open sou...`,
             status: {
                 active: false,
@@ -98,7 +115,24 @@ export const
                     "/profile-6.png",
                     "/profile-7.png",
                     "/profile-8.jpg",
-                ]
+                ],
+                proposals: [
+                    {
+                        q: `I agree to metaguild building a metaverse`,
+                        v: 183,
+                        c: "E03D3D"
+                    },
+                    {
+                        q: `I disagree to metaguild building a metaverse`,
+                        v: 235,
+                        c: "3DE04D"
+                    },
+                    {
+                        q: `Let’s build one but on private beta`,
+                        v: 121,
+                        c: "4A3DE0"
+                    }
+                ],
             }
         },
 
@@ -106,7 +140,7 @@ export const
             id: 2,
             img: "/nd.png",
             company: "Archimedes",
-            title: `Chain Validators Prop...`,
+            title: `Chain Validators Proposal`,
             text: `Archimedes selects battle tested yield bearing stable coins and leverages them up to 10x, producing a top of market Apy, posit...`,
             status: {
                 active: true,
@@ -122,7 +156,24 @@ export const
                     "/profile-12.jpg",
                     "/profile-1.jpg",
                     "/profile-5.jpg",
-                ]
+                ],
+                proposals: [
+                    {
+                        q: `I agree to metaguild building a metaverse`,
+                        v: 183,
+                        c: "E03D3D"
+                    },
+                    {
+                        q: `I disagree to metaguild building a metaverse`,
+                        v: 235,
+                        c: "3DE04D"
+                    },
+                    {
+                        q: `Let’s build one but on private beta`,
+                        v: 121,
+                        c: "4A3DE0"
+                    }
+                ],
             }
         },
 
@@ -130,7 +181,7 @@ export const
             id: 3,
             img: "/peeq.png",
             company: "Peaq Network",
-            title: `Physical Infrastruct...`,
+            title: `Physical Infrastructure`,
             text: `Through peaq control your web3 machine command and control center, you can link your raspberry Pi’s with peaq testnet and use ...`,
             status: {
                 active: true,
@@ -144,7 +195,24 @@ export const
                 images: [
                     "/profile-7.png",
                     "/profile-9.jpg",
-                ]
+                ],
+                proposals: [
+                    {
+                        q: `I agree to metaguild building a metaverse`,
+                        v: 183,
+                        c: "E03D3D"
+                    },
+                    {
+                        q: `I disagree to metaguild building a metaverse`,
+                        v: 235,
+                        c: "3DE04D"
+                    },
+                    {
+                        q: `Let’s build one but on private beta`,
+                        v: 121,
+                        c: "4A3DE0"
+                    }
+                ],
             }
         },
 
@@ -152,7 +220,7 @@ export const
             id: 4,
             img: "/moonbeam.jpg",
             company: "Mooonbeam",
-            title: `Grants and Sponsors...`,
+            title: `Grants and Sponsors Proposal`,
             text: `Moonbeam is more than an EVM implementation, it’s a highly specialized layer1 chain that mirrors ethereum’s web3 RPC, ac...`,
             status: {
                 active: true,
@@ -168,7 +236,24 @@ export const
                     "/profile-6.png",
                     "/profile-4.jpg",
                     "/profile-3.jpg",
-                ]
+                ],
+                proposals: [
+                    {
+                        q: `I agree to metaguild building a metaverse`,
+                        v: 183,
+                        c: "E03D3D"
+                    },
+                    {
+                        q: `I disagree to metaguild building a metaverse`,
+                        v: 235,
+                        c: "3DE04D"
+                    },
+                    {
+                        q: `Let’s build one but on private beta`,
+                        v: 121,
+                        c: "4A3DE0"
+                    }
+                ],
             }
         },
 
@@ -176,7 +261,7 @@ export const
             id: 5,
             img: "/bnb.png",
             company: "Bnb chain",
-            title: `Allow Defi Boilerpl...`,
+            title: `Allow Defi Boilerplates`,
             text: `For boilerplates related to defi tools and dapp development, the templates should contain minimum required tools already confi...`,
             status: {
                 active: false,
@@ -192,7 +277,24 @@ export const
                     "/profile-11.jpg",
                     "/profile-10.png",
                     "/profile-9.jpg",
-                ]
+                ],
+                proposals: [
+                    {
+                        q: `I agree to metaguild building a metaverse`,
+                        v: 183,
+                        c: "E03D3D"
+                    },
+                    {
+                        q: `I disagree to metaguild building a metaverse`,
+                        v: 235,
+                        c: "3DE04D"
+                    },
+                    {
+                        q: `Let’s build one but on private beta`,
+                        v: 121,
+                        c: "4A3DE0"
+                    }
+                ],
             }
         },
 
@@ -200,14 +302,14 @@ export const
             id: 6,
             img: "/mg.png",
             company: "Metaguild",
-            title: `Metaverse propos...`,
+            title: `Metaverse Proposal`,
             text: `Metaverse guild that maximizes your gaming rewards, earn weekly by participating in competitions and game beta test...`,
             status: {
                 active: true,
                 days: 3
             },
             vote: {
-                count: 540,
+                count: 539,
                 red: 16,
                 green: 48,
                 blue: 4,
@@ -218,15 +320,32 @@ export const
                     "/profile-7.png",
                     "/profile-5.jpg",
                     "/profile-3.jpg",
-                ]
-            }
+                ],
+                proposals: [
+                    {
+                        q: `I agree to metaguild building a metaverse`,
+                        v: 183,
+                        c: "E03D3D"
+                    },
+                    {
+                        q: `I disagree to metaguild building a metaverse`,
+                        v: 235,
+                        c: "3DE04D"
+                    },
+                    {
+                        q: `Let’s build one but on private beta`,
+                        v: 121,
+                        c: "4A3DE0"
+                    }
+                ],
+            },
         },
 
         {
             id: 7,
             img: "/chainlink.png",
             company: "Chainlink",
-            title: `Data Providers ...`,
+            title: `Data Providers Proposal`,
             text: ` Chainlink is the industry-standard web3 services platform connecting the people, business, and data of today with the ...`,
             status: {
                 active: true,
@@ -242,7 +361,24 @@ export const
                     "/profile-7.png",
                     "/profile-6.png",
                     "/profile-5.jpg",
-                ]
+                ],
+                proposals: [
+                    {
+                        q: `I agree to metaguild building a metaverse`,
+                        v: 183,
+                        c: "E03D3D"
+                    },
+                    {
+                        q: `I disagree to metaguild building a metaverse`,
+                        v: 235,
+                        c: "3DE04D"
+                    },
+                    {
+                        q: `Let’s build one but on private beta`,
+                        v: 121,
+                        c: "4A3DE0"
+                    }
+                ],
             }
         },
 
@@ -250,7 +386,7 @@ export const
             id: 9,
             img: "/multidao.png",
             company: "Bankless DAO",
-            title: `Allocation Of Air...`,
+            title: `Allocation Of Airdrops`,
             text: ` Bankless is a movement for pioneers seeking liberation from the tyranny of the traditional financial system, going ... `,
             status: {
                 active: true,
@@ -266,7 +402,37 @@ export const
                     "/profile-3.jpg",
                     "/profile-2.jpg",
                     "/profile-1.jpg",
-                ]
+                ],
+                proposals: [
+                    {
+                        q: `I agree to metaguild building a metaverse`,
+                        v: 183,
+                        c: "E03D3D"
+                    },
+                    {
+                        q: `I disagree to metaguild building a metaverse`,
+                        v: 235,
+                        c: "3DE04D"
+                    },
+                    {
+                        q: `Let’s build one but on private beta`,
+                        v: 121,
+                        c: "4A3DE0"
+                    }
+                ],
             }
         },
     ];
+
+    // ! <====================== new object here! ==========================>
+
+    // proposals = [
+    //     {
+    //         id: 6,
+    //         questions: [
+    //             `I agree to metaguild building a metaverse`,
+    //             `I disagree to metaguild building a metaverse`,
+    //             `Let’s build one but on private beta`
+    //         ]
+    //     }
+    // ];
