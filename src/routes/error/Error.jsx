@@ -9,8 +9,10 @@ import { gsap } from 'gsap';
 const Error = () => {
 
     useEffect(() => {
-        const one = new SplitType("#one");
-        const two = new SplitType("#two");
+        const
+            one = new SplitType("#one"),
+            two = new SplitType("#two"),
+            moveEl = document.querySelector('#move');
 
         gsap.to(".char", {
             y: 0,
@@ -18,12 +20,22 @@ const Error = () => {
             delay: 2.5,
             duration: .1
         });
+
+
+        moveEl.addEventListener("mousemove", (event) => {
+            const
+                speed = moveEl.getAttribute("data-speed"),
+                x = (window.innerWidth - event.pageX * speed) / 100,
+                y = (window.innerHeight - event.pageY * speed) / 100;
+
+            moveEl.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        });
     }, []);
 
 
     return (
         <section className="error">
-            <div className="move-con">
+            <div className="move-con" data-speed={2} id='move'>
                 <E404 />
             </div>
 
