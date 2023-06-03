@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { MainUI, Scroll } from "./utils";
-import { Landing, Explore, Community, Vote } from "./routes";
+import { Landing, Explore, Community, Vote, Error } from "./routes";
+import Media from "react-media";
 
 function App() {
 
@@ -47,12 +48,34 @@ function App() {
 					},
 				]
 			},
+
+			{
+				path: "*",
+				element: <Error />,
+			},
 		]);
 
 
 	return (
 		<>
-			<RouterProvider router={router} />
+			<Media query={`(min-width:768px)`}>
+				{
+					matches => {
+						return matches ?
+
+							<section className="container">
+								<RouterProvider router={router} />
+							</section>
+
+							:
+
+							<section className="query">
+								<Error />
+							</section>
+							;
+					}
+				}
+			</Media>
 		</>
 	);
 }
