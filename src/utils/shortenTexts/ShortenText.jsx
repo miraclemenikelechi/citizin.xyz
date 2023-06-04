@@ -5,7 +5,7 @@ const ShortenText = ({ word, length }) => {
             return <div>{text}</div>;
         }
 
-        const truncatedText = text.slice(0, maxCharacters);
+        let truncatedText = text.slice(0, maxCharacters);
         if (ellipsis) {
             truncatedText += ellipsis;
         }
