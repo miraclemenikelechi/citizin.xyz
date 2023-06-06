@@ -1,0 +1,77 @@
+@import "../../index.scss";
+
+
+.create {
+    position: absolute;
+    right: 0;
+    top: 550px;
+    width: calc(100% - 360px);
+
+    >div {
+        @include flex($direction:column);
+        gap: 35px;
+
+        >div {
+            @include flex($justify:space-between);
+            margin-top: 1rem;
+
+            &.top {
+                width: 90%;
+                gap: 1.25rem;
+
+                >span {
+                    @include equal(24px);
+                    @include flex;
+
+                    svg {
+                        path {
+                            fill: hwb(215 12% 2%);
+                        }
+                    }
+                }
+
+                h2 {
+                    margin-right: auto;
+                    font-weight: 600;
+                    font-family: $syne;
+                    font-size: 1.5rem;
+                }
+
+                div {
+                    @include flex;
+                    gap: 1.25rem;
+
+                    span {
+                        @include flex;
+
+                        &:first-of-type {
+                            font-family: $syne;
+                            font-weight: 600;
+                            font-size: .9375rem;
+                            text-transform: capitalize;
+                            color: hwb(195 6% 92% / 0.71);
+                        }
+
+                        &:last-of-type {
+                            width: 40px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+
+            &.bottom {
+                flex-direction: column;
+                gap: 2.375rem;
+                width: 88%;
+
+                article {
+                    border-radius: 15px;
+                    @include flex($direction:column);
+                    background: rgba(255, 255, 255, 0.9);
+                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+                }
+            }
+        }
+    }
+}

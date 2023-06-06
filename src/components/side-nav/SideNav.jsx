@@ -132,11 +132,11 @@ const SideNav = () => {
                 <section className='bottom'>
                     <ul>
                         {
-                            navLinks.map((link) => {
+                            navLinks.map((link, index) => {
                                 const { to, text, icon, side } = link;
 
                                 return (
-                                    <li>
+                                    <li key={index}>
                                         <NavLink to={to}>
                                             <span>{icon}</span>
 

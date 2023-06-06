@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { MainUI, Scroll } from "./utils";
-import { Landing, Explore, Community, Vote, Error } from "./routes";
+import { Landing, Explore, Community, Vote, Error, Create } from "./routes";
 import Media from "react-media";
 
 function App() {
@@ -31,7 +31,10 @@ function App() {
 						path: "/explore",
 						element: <Explore />
 					},
-
+					{
+						path: 'create',
+						element: <Create />
+					},
 					{
 						path: "/active/vote/:id",
 						element: <Vote />
