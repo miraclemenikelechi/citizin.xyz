@@ -9,9 +9,9 @@ const Create = () => {
 
         [request, setRequest] = useState({
             questions: {
-                q1: "The game is ready to be launched in mainnet'",
-                q2: "The game needs another iteration in beta'",
-                q3: "The game should be launched but in private beta'",
+                q1: "The game is ready to be launched in mainnet",
+                q2: "The game needs another iteration in beta",
+                q3: "The game should be launched but in private beta",
             },
 
             eligibility: {
@@ -77,10 +77,15 @@ const Create = () => {
                             </h5>
                         </div>
 
-                        <input type="text" placeholder={request.questions.q1} />
-                        <input type="text" placeholder={request.questions.q2} />
-                        <input type="text" placeholder={request.questions.q3} />
-
+                        <span>
+                            <input type="text" placeholder={request.questions.q1} />
+                        </span>
+                        <span>
+                            <input type="text" placeholder={request.questions.q2} />
+                        </span>
+                        <span>
+                            <input type="text" placeholder={request.questions.q3} />
+                        </span>
                     </article>
 
                     <article>
@@ -104,8 +109,29 @@ const Create = () => {
                     </article>
 
                     <article>
-                        <div>left</div>
-                        <div>right</div>
+                        <div>
+                            <h5>start date</h5>
+
+                            <div>
+                                <input type="text" placeholder='dd' value={request.date.start.d} />
+                                /
+                                <input type="text" placeholder='mm' />
+                                /
+                                <input type="text" placeholder='yy' />
+                            </div>
+                        </div>
+
+                        <div>
+                            <h5>end date</h5>
+
+                            <div>
+                                <input type="text" placeholder='dd' />
+                                /
+                                <input type="text" placeholder='mm' />
+                                /
+                                <input type="text" placeholder='yy' />
+                            </div>
+                        </div>
                     </article>
                 </div>
             </div>
