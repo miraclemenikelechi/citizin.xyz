@@ -1,8 +1,8 @@
-import "./landing.scss";
 import { LogoDark, LandingArrow } from "../../assets/icons";
-import { Link } from "react-router-dom";
 import { Scroll } from "../../utils";
+import "./landing.scss";
 
+import { Link } from "react-router-dom";
 
 const Landing = () => {
 

@@ -1,6 +1,7 @@
-import './community.scss';
 import { ArrowRight, CommunityIcon } from '../../assets/icons';
 import { communities } from "../../assets/data";
+import './community.scss';
+
 
 const Community = () => {
     const

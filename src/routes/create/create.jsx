@@ -1,51 +1,56 @@
 import { CreateProposal, ToggleOff, ToggleOn } from '../../assets/icons';
 import './create.scss';
+
+// import { useForm } from "react-hook-form";
 import { useState } from 'react';
 
 const Create = () => {
+    // console.log(useForm());
+
+
+    // const { register, control } = useForm();
 
     const
         [activated, setActivated] = useState(false),
 
         [request, setRequest] = useState({
-            questions: {
-                q1: "The game is ready to be launched in mainnet",
-                q2: "The game needs another iteration in beta",
-                q3: "The game should be launched but in private beta",
-            },
 
-            eligibility: {
-                e1: "To be qualified to vote on this proposal, DAO member must have our native token",
-                e2: "Must have played our game over time and is familiar with crypto",
-                e3: "It is advised but not mandatory to have prior gaming experience",
-            },
+            // questions
+            q1: "",
+            q2: "",
+            q3: "",
 
-            address: "Contract address",
+            // eligibility
+            e1: "",
+            e2: "",
+            e3: "",
 
-            date: {
-                start: {
-                    d: "",
-                    m: "",
-                    y: "",
-                },
-                end: {
-                    d: "",
-                    m: "",
-                    y: "",
-                }
-            }
+            // adddress
+            address: "",
+
+            // dates
+            start_d: "",
+            start_m: "",
+            start_y: "",
+
+            end_d: "",
+            end_m: "",
+            end_y: "",
         }),
 
         handleChange = (event) => {
             const { name, value, checked, type, } = event.target;
-
-            setCast(function (previous) {
+            setRequest(function (previous) {
                 return ({
                     ...previous,
-                    [name]: type === "checkbox" ? checked : value
+                    [name]: type === "checkbox" ? checked : value,
                 });
             });
         };
+
+    const { q1, q2, q3, e1, e2, e3, address, start_d, start_m, start_y, end_d, end_m, end_y } = request;
+
+    
 
     return (
         <section className="create">
@@ -78,13 +83,30 @@ const Create = () => {
                         </div>
 
                         <span>
-                            <input type="text" placeholder={request.questions.q1} />
+                            <input
+                                name="q1"
+                                type="text"
+                                value={q1}
+                                onChange={handleChange}
+                                placeholder="The game is ready to be launched in mainnet"
+                            />
                         </span>
                         <span>
-                            <input type="text" placeholder={request.questions.q2} />
+                            <input
+                                name='q2'
+                                value={q2}
+                                type="text"
+                                onChange={handleChange}
+                                placeholder="The game needs another iteration in beta"
+                            />
                         </span>
                         <span>
-                            <input type="text" placeholder={request.questions.q3} />
+                            <input
+                                name='q3'
+                                value={q3}
+                                type="text"
+                                onChange={handleChange}
+                                placeholder="The game should be launched but in private beta" />
                         </span>
                     </article>
 
@@ -94,9 +116,27 @@ const Create = () => {
                         </h5>
 
                         <div>
-                            <input type="text" placeholder={request.eligibility.e1} />
-                            <input type="text" placeholder={request.eligibility.e2} />
-                            <input type="text" placeholder={request.eligibility.e3} />
+                            <input
+                                name="e1"
+                                value={e1}
+                                type="text"
+                                onChange={handleChange}
+                                placeholder="To be qualified to vote on this proposal, DAO member must have our native token"
+                            />
+                            <input
+                                name="e2"
+                                value={e2}
+                                type="text"
+                                onChange={handleChange}
+                                placeholder="Must have played our game over time and is familiar with crypto"
+                            />
+                            <input
+                                name="e3"
+                                value={e3}
+                                type="text"
+                                onChange={handleChange}
+                                placeholder="It is advised but not mandatory to have prior gaming experience"
+                            />
                         </div>
                     </article>
 
@@ -105,7 +145,13 @@ const Create = () => {
                             Provide token Contract address below to authenticate each holder, if it’s a criteria  to vote
                         </h5>
 
-                        <input type="text" placeholder={request.address} />
+                        <input
+                            type="text"
+                            name='address'
+                            value={address}
+                            onChange={handleChange}
+                            placeholder="Contract address"
+                        />
                     </article>
 
                     <article>
@@ -113,11 +159,21 @@ const Create = () => {
                             <h5>start date</h5>
 
                             <div>
-                                <input type="text" placeholder='dd' value={request.date.start.d} />
+                                <input type="text"
+                                    placeholder='dd'
+                                    name='start_d'
+                                    value={start_d}
+                                    onChange={handleChange} />
                                 /
-                                <input type="text" placeholder='mm' />
+                                <input type="text"
+                                    placeholder='mm'
+                                    name='start-month'
+                                />
                                 /
-                                <input type="text" placeholder='yy' />
+                                <input type="text"
+                                    placeholder='yy'
+                                    name='start-year'
+                                />
                             </div>
                         </div>
 

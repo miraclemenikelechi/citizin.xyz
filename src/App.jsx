@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import { MainUI, Scroll } from "./utils";
 import { Landing, Explore, Community, Vote, Error, Create } from "./routes";
+import { MainUI, Scroll } from "./utils";
+
 import Media from "react-media";
 
 function App() {

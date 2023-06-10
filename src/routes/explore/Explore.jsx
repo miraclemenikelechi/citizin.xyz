@@ -1,9 +1,9 @@
-import './explore.scss';
 import { ArrowRight } from '../../assets/icons';
-import { cards } from '../../assets/data';
-import { Link } from 'react-router-dom';
 import { ShortenText } from '../../utils';
+import { cards } from '../../assets/data';
+import './explore.scss';
 
+import { Link } from 'react-router-dom';
 
 const
     Card = ({ id, img, company, title, text, status: { active, days }, vote: { count, red, green, blue, images } }) => {

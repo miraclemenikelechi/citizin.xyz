@@ -1,10 +1,12 @@
-import './error.scss';
 import { E404 } from '../../assets/icons';
-import Media from 'react-media';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
-import SplitType from 'split-type';
+import './error.scss';
+
 import { gsap } from 'gsap';
+import { useEffect } from 'react';
+import Media from 'react-media';
+import SplitType from 'split-type';
+
 
 const Error = () => {
 

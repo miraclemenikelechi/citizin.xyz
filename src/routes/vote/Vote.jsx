@@ -1,7 +1,8 @@
-import './vote.scss';
-import { cards } from '../../assets/data';
 import { ArrowLeft, Unchecked, Checked } from '../../assets/icons';
 import { useParams, Link } from 'react-router-dom';
+import { cards } from '../../assets/data';
+import './vote.scss';
+
 import { useEffect, useState } from 'react';
 
 const Vote = () => {
