@@ -10,7 +10,7 @@ import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 
 const projectId = import.meta.env.VITE_WALLET_CONNECT_PROJECT_ID;
-const alchemyKey = import.meta.env.VITE_ALCHEMY_API_KEY;
+const alchemyKey = import.meta.env.VITE_ALCHEMY_API_ID;
 
 const { chains, publicClient } = configureChains(
 	[arbitrumSepolia],
