@@ -1,13 +1,12 @@
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import { Landing, Explore, Community, Vote, Error, Create } from "./routes";
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Web3Auth } from "./lib/web-3-auth";
+import { Community, Create, Error, Explore, Landing, Vote } from "./routes";
 import { MainUI, Scroll } from "./utils";
 
 import Media from "react-media";
 
 function App() {
-
-	const
-		UiLayout = () => {
+	const UiLayout = () => {
 			return (
 				<>
 					<Scroll />
@@ -16,8 +15,6 @@ function App() {
 				</>
 			);
 		},
-
-
 		router = createBrowserRouter([
 			{
 				path: "/",
@@ -30,27 +27,27 @@ function App() {
 				children: [
 					{
 						path: "/explore",
-						element: <Explore />
+						element: <Explore />,
 					},
 					{
-						path: 'create',
-						element: <Create />
+						path: "create",
+						element: <Create />,
 					},
 					{
 						path: "/active/vote/:id",
-						element: <Vote />
+						element: <Vote />,
 					},
 
 					{
 						path: "/past/vote/:id",
-						element: <Vote />
+						element: <Vote />,
 					},
 
 					{
 						path: `/communities`,
-						element: <Community />
+						element: <Community />,
 					},
-				]
+				],
 			},
 
 			{
@@ -59,27 +56,23 @@ function App() {
 			},
 		]);
 
-
 	return (
 		<>
-			<Media query={`(min-width:768px)`}>
-				{
-					matches => {
-						return matches ?
-
+			<Web3Auth>
+				<Media query={`(min-width:768px)`}>
+					{(matches) => {
+						return matches ? (
 							<section className="container">
 								<RouterProvider router={router} />
 							</section>
-
-							:
-
+						) : (
 							<section className="query">
 								<Error />
 							</section>
-							;
-					}
-				}
-			</Media>
+						);
+					}}
+				</Media>
+			</Web3Auth>
 		</>
 	);
 }

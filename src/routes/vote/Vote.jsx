@@ -38,6 +38,7 @@ const Vote = () => {
         });
     }, []);
 
+console.log(cast);
 
     return (
         <section className="vote">

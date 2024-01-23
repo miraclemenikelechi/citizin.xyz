@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@web3modal/wagmi1": "^4.0.0-544a28f1",
     "autoprefixer": "^10.4.14",
     "gsap": "^3.11.5",
     "postcss": "^8.4.24",
@@ -20,7 +21,9 @@
     "react-media": "^1.10.0",
     "react-router-dom": "^6.11.2",
     "sass": "^1.62.1",
-    "split-type": "^0.3.3"
+    "split-type": "^0.3.3",
+    "viem": "^1.21.4",
+    "wagmi": "^1.4.13"
   },
   "browserslist": [
     "cover 99.5%"
