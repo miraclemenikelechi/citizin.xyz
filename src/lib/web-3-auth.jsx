@@ -11,9 +11,10 @@ import { publicProvider } from "wagmi/providers/public";
 
 const projectId = import.meta.env.VITE_WALLET_CONNECT_PROJECT_ID;
 const alchemyKey = import.meta.env.VITE_ALCHEMY_API_ID;
+const chainList = [arbitrumSepolia]
 
 const { chains, publicClient } = configureChains(
-	[arbitrumSepolia],
+	chainList,
 	[
 		walletConnectProvider({ projectId }),
 		alchemyProvider({ apiKey: alchemyKey }),
@@ -49,8 +50,8 @@ createWeb3Modal({
 	wagmiConfig,
 	projectId,
 	chains,
-	enableAnalytics: true,
 	themeMode: "light",
+	defaultChain: arbitrumSepolia,
 });
 
 export function Web3Auth({ children }) {
