@@ -1,16 +1,24 @@
-import { useWeb3Modal } from "@web3modal/wagmi1/react";
-import { useEffect } from "react";
+import {
+    useAccountModal,
+    useChainModal,
+    useConnectModal,
+} from "@rainbow-me/rainbowkit";
 import { Link } from "react-router-dom";
 import { LandingArrow, LogoDark } from "../../assets/icons";
 import { Scroll } from "../../utils";
+import { truncateWalletAddress } from "../../lib/truncate-address";
 import "./landing.scss";
 
-import { truncateWalletAddress } from "../../lib/truncate-address";
 import { useAccount } from "wagmi";
+import { lisk, liskSepolia } from "viem/chains";
 
 const Landing = () => {
-    const { open } = useWeb3Modal();
-    const { address, isConnected } = useAccount();
+    const { address, isConnected, chainId } = useAccount();
+    const { openConnectModal } = useConnectModal();
+    const { openAccountModal } = useAccountModal();
+    const { openChainModal } = useChainModal();
+
+    const chains = [lisk.id, liskSepolia.id];
 
     const links = [
         {
@@ -43,8 +51,6 @@ const Landing = () => {
         },
     ];
 
-    useEffect(() => {});
-
     return (
         <section className="landing">
             <Scroll />
@@ -68,13 +74,25 @@ const Landing = () => {
                 </nav>
 
                 <div className="cta">
-                    <button onClick={() => open()}>
-                        <span>
-                            {isConnected
-                                ? truncateWalletAddress(address)
-                                : "connect"}
-                        </span>
-                    </button>
+                    {!isConnected && openConnectModal ? (
+                        <button onClick={openConnectModal} type="button">
+                            <span>connect</span>
+                        </button>
+                    ) : null}
+
+                    {isConnected && openAccountModal ? (
+                        <button onClick={openAccountModal} type="button">
+                            <span>{truncateWalletAddress(address)}</span>
+                        </button>
+                    ) : null}
+
+                    {isConnected &&
+                    !chains.includes(chainId) &&
+                    openChainModal ? (
+                        <button onClick={openChainModal} type="button">
+                            <span>switch network</span>
+                        </button>
+                    ) : null}
                 </div>
             </div>
 
