@@ -59,7 +59,32 @@
             @include flex;
             gap: 1.25rem;
 
-            button {
+            .cta {
+                width: 112px;
+                height: 48px;
+
+                button {
+                    @include equal(100%);
+                    @include flex;
+                    border-radius: 2.125rem;
+                    border: 1px solid black;
+                    outline: none;
+                    cursor: pointer;
+                    transition: all 0.15s ease;
+
+                    span {
+                        font-family: $syne;
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+
+                    &:active {
+                        scale: 0.95;
+                    }
+                }
+            }
+
+            > button {
                 height: 48px;
                 width: 180px;
                 border-radius: 5px;
@@ -104,11 +129,7 @@
                         @include flex;
                         overflow: hidden;
                         padding: 0.25rem;
-                        background: linear-gradient(
-                            180deg,
-                            hwb(245 29% 31%) 0%,
-                            hwb(256 11% 2%) 100%
-                        );
+                        background: linear-gradient(180deg, hwb(245 29% 31%) 0%, hwb(256 11% 2%) 100%);
 
                         img {
                             border-radius: inherit;
