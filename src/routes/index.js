@@ -5,11 +5,4 @@ import Vote from "./vote/Vote";
 import Create from "./create/create.jsx";
 import Error from "./error/Error";
 
-export {
-    Landing,
-    Explore,
-    Community,
-    Vote,
-    Create,
-    Error
-};
+export { Landing, Explore, Community, Vote, Create, Error };

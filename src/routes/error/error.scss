@@ -1,10 +1,9 @@
 @import "../../index.scss";
 
-
 .error {
     width: 100%;
     height: 100vh;
-    @include flex($direction:column);
+    @include flex($direction: column);
     gap: 1rem;
     overflow: hidden;
 
@@ -46,7 +45,6 @@
             }
         }
 
-
         @keyframes fill-mobile {
             from {
                 fill: transparent;
@@ -81,7 +79,7 @@
             bottom: 10%;
         }
 
-        >p {
+        > p {
             @include flex;
             font-size: 2rem;
             gap: 50%;
@@ -92,7 +90,7 @@
             font-size: 2.5rem;
             overflow: hidden;
             height: 20px;
-            box-shadow: 0px 4px 5px rgba(0, 0, 0, .5);
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
             animation: fade-desktop 1s ease forwards 4s;
             opacity: 0;
 
@@ -113,7 +111,7 @@
             a {
                 @include flex;
                 font-family: $axiforma;
-                transition: .55s;
+                transition: 0.55s;
 
                 &:hover {
                     padding: 2rem;
@@ -125,7 +123,7 @@
             a {
                 .char {
                     transform: translateY(115px);
-                    transition: all .5s;
+                    transition: all 0.5s;
                 }
             }
 
@@ -146,7 +144,7 @@
         article {
             font-family: $syne;
             opacity: 0;
-            scale: .75;
+            scale: 0.75;
             transform: translateX(5rem);
             animation: fade-mobile 1s ease forwards 2.5s;
 
@@ -167,7 +165,7 @@
                 to {
                     opacity: 1;
                     // transform: translateY(-.5rem);
-                    scale: .75;
+                    scale: 0.75;
                 }
             }
         }

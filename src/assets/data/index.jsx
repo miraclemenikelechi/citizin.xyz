@@ -1,12 +1,10 @@
-export const
-
-    communities = [
+export const communities = [
         {
             id: 0,
             img: "/moonbeam.jpg",
             title: "Moonbeam DAO",
             comment: `Moonbeam is more than an EVM implementation, it’s a highly specialized layer 1 chain that mirrors ethereum’s web3 RPC`,
-            members: 954
+            members: 954,
         },
 
         {
@@ -14,7 +12,7 @@ export const
             img: "/chainlink.png",
             title: "Chainlink  DAO",
             comment: `Chainlink is the industry standard web3 services platform people, businesses and data`,
-            members: 600
+            members: 600,
         },
 
         {
@@ -22,7 +20,7 @@ export const
             img: "bnb.png",
             title: "BNB Chain DAO",
             comment: `Building products and toolings in web3 on the binance chain`,
-            members: 430
+            members: 430,
         },
 
         {
@@ -30,7 +28,7 @@ export const
             img: "multidao.png",
             title: "Multichain  DAO",
             comment: `Multichain is a decentralized autonomous organization building multichain infrastructure`,
-            members: 416
+            members: 416,
         },
 
         {
@@ -38,7 +36,7 @@ export const
             img: "wireshape.png",
             title: "Wireshape DAO",
             comment: `Modern product information standard to drive the creation of new generation ecommerce`,
-            members: 317
+            members: 317,
         },
 
         {
@@ -46,10 +44,9 @@ export const
             img: "mg.png",
             title: "Metaguild DAO",
             comment: `Maximize your gaming reward, earn weekly by participating in competitions`,
-            members: 254
+            members: 254,
         },
     ],
-
     // ! <====================== new object here! ==========================>
 
     cards = [
@@ -61,7 +58,7 @@ export const
             text: `A decentralized autonomous organization building multichain verse merging for all ecosystem and blockchains. We are the lea...`,
             status: {
                 active: true,
-                days: 6
+                days: 6,
             },
             vote: {
                 count: 800,
@@ -78,18 +75,18 @@ export const
                     {
                         q: `I agree to metaguild building a metaverse`,
                         v: 183,
-                        c: "E03D3D"
+                        c: "E03D3D",
                     },
                     {
                         q: `I disagree to metaguild building a metaverse`,
                         v: 235,
-                        c: "3DE04D"
+                        c: "3DE04D",
                     },
                     {
                         q: `Let’s build one but on private beta`,
                         v: 121,
-                        c: "4A3DE0"
-                    }
+                        c: "4A3DE0",
+                    },
                 ],
             },
         },
@@ -102,7 +99,7 @@ export const
             text: `Modern product information standard to drive the creation of the new generation of decentralized ecommecers through open sou...`,
             status: {
                 active: false,
-                days: null
+                days: null,
             },
             vote: {
                 count: 950,
@@ -120,20 +117,20 @@ export const
                     {
                         q: `I agree to metaguild building a metaverse`,
                         v: 183,
-                        c: "E03D3D"
+                        c: "E03D3D",
                     },
                     {
                         q: `I disagree to metaguild building a metaverse`,
                         v: 235,
-                        c: "3DE04D"
+                        c: "3DE04D",
                     },
                     {
                         q: `Let’s build one but on private beta`,
                         v: 121,
-                        c: "4A3DE0"
-                    }
+                        c: "4A3DE0",
+                    },
                 ],
-            }
+            },
         },
 
         {
@@ -144,7 +141,7 @@ export const
             text: `Archimedes selects battle tested yield bearing stable coins and leverages them up to 10x, producing a top of market Apy, posit...`,
             status: {
                 active: true,
-                days: 2
+                days: 2,
             },
             vote: {
                 count: 765,
@@ -161,20 +158,20 @@ export const
                     {
                         q: `I agree to metaguild building a metaverse`,
                         v: 183,
-                        c: "E03D3D"
+                        c: "E03D3D",
                     },
                     {
                         q: `I disagree to metaguild building a metaverse`,
                         v: 235,
-                        c: "3DE04D"
+                        c: "3DE04D",
                     },
                     {
                         q: `Let’s build one but on private beta`,
                         v: 121,
-                        c: "4A3DE0"
-                    }
+                        c: "4A3DE0",
+                    },
                 ],
-            }
+            },
         },
 
         {
@@ -185,35 +182,32 @@ export const
             text: `Through peaq control your web3 machine command and control center, you can link your raspberry Pi’s with peaq testnet and use ...`,
             status: {
                 active: true,
-                days: 13
+                days: 13,
             },
             vote: {
                 count: 45,
                 red: null,
                 green: "7",
                 blue: null,
-                images: [
-                    "/profile-7.png",
-                    "/profile-9.jpg",
-                ],
+                images: ["/profile-7.png", "/profile-9.jpg"],
                 proposals: [
                     {
                         q: `I agree to metaguild building a metaverse`,
                         v: 183,
-                        c: "E03D3D"
+                        c: "E03D3D",
                     },
                     {
                         q: `I disagree to metaguild building a metaverse`,
                         v: 235,
-                        c: "3DE04D"
+                        c: "3DE04D",
                     },
                     {
                         q: `Let’s build one but on private beta`,
                         v: 121,
-                        c: "4A3DE0"
-                    }
+                        c: "4A3DE0",
+                    },
                 ],
-            }
+            },
         },
 
         {
@@ -224,7 +218,7 @@ export const
             text: `Moonbeam is more than an EVM implementation, it’s a highly specialized layer1 chain that mirrors ethereum’s web3 RPC, ac...`,
             status: {
                 active: true,
-                days: 9
+                days: 9,
             },
             vote: {
                 count: 321,
@@ -241,20 +235,20 @@ export const
                     {
                         q: `I agree to metaguild building a metaverse`,
                         v: 183,
-                        c: "E03D3D"
+                        c: "E03D3D",
                     },
                     {
                         q: `I disagree to metaguild building a metaverse`,
                         v: 235,
-                        c: "3DE04D"
+                        c: "3DE04D",
                     },
                     {
                         q: `Let’s build one but on private beta`,
                         v: 121,
-                        c: "4A3DE0"
-                    }
+                        c: "4A3DE0",
+                    },
                 ],
-            }
+            },
         },
 
         {
@@ -265,7 +259,7 @@ export const
             text: `For boilerplates related to defi tools and dapp development, the templates should contain minimum required tools already confi...`,
             status: {
                 active: false,
-                days: null
+                days: null,
             },
             vote: {
                 count: 874,
@@ -282,20 +276,20 @@ export const
                     {
                         q: `I agree to metaguild building a metaverse`,
                         v: 183,
-                        c: "E03D3D"
+                        c: "E03D3D",
                     },
                     {
                         q: `I disagree to metaguild building a metaverse`,
                         v: 235,
-                        c: "3DE04D"
+                        c: "3DE04D",
                     },
                     {
                         q: `Let’s build one but on private beta`,
                         v: 121,
-                        c: "4A3DE0"
-                    }
+                        c: "4A3DE0",
+                    },
                 ],
-            }
+            },
         },
 
         {
@@ -306,7 +300,7 @@ export const
             text: `Metaverse guild that maximizes your gaming rewards, earn weekly by participating in competitions and game beta test...`,
             status: {
                 active: true,
-                days: 3
+                days: 3,
             },
             vote: {
                 count: 539,
@@ -325,18 +319,18 @@ export const
                     {
                         q: `I agree to metaguild building a metaverse`,
                         v: 183,
-                        c: "E03D3D"
+                        c: "E03D3D",
                     },
                     {
                         q: `I disagree to metaguild building a metaverse`,
                         v: 235,
-                        c: "3DE04D"
+                        c: "3DE04D",
                     },
                     {
                         q: `Let’s build one but on private beta`,
                         v: 121,
-                        c: "4A3DE0"
-                    }
+                        c: "4A3DE0",
+                    },
                 ],
             },
         },
@@ -349,7 +343,7 @@ export const
             text: ` Chainlink is the industry-standard web3 services platform connecting the people, business, and data of today with the ...`,
             status: {
                 active: true,
-                days: 8
+                days: 8,
             },
             vote: {
                 count: 882,
@@ -366,20 +360,20 @@ export const
                     {
                         q: `I agree to metaguild building a metaverse`,
                         v: 183,
-                        c: "E03D3D"
+                        c: "E03D3D",
                     },
                     {
                         q: `I disagree to metaguild building a metaverse`,
                         v: 235,
-                        c: "3DE04D"
+                        c: "3DE04D",
                     },
                     {
                         q: `Let’s build one but on private beta`,
                         v: 121,
-                        c: "4A3DE0"
-                    }
+                        c: "4A3DE0",
+                    },
                 ],
-            }
+            },
         },
 
         {
@@ -390,7 +384,7 @@ export const
             text: ` Bankless is a movement for pioneers seeking liberation from the tyranny of the traditional financial system, going ... `,
             status: {
                 active: true,
-                days: 3
+                days: 3,
             },
             vote: {
                 count: 956,
@@ -407,32 +401,32 @@ export const
                     {
                         q: `I agree to metaguild building a metaverse`,
                         v: 183,
-                        c: "E03D3D"
+                        c: "E03D3D",
                     },
                     {
                         q: `I disagree to metaguild building a metaverse`,
                         v: 235,
-                        c: "3DE04D"
+                        c: "3DE04D",
                     },
                     {
                         q: `Let’s build one but on private beta`,
                         v: 121,
-                        c: "4A3DE0"
-                    }
+                        c: "4A3DE0",
+                    },
                 ],
-            }
+            },
         },
     ];
 
-    // ! <====================== new object here! ==========================>
+// ! <====================== new object here! ==========================>
 
-    // proposals = [
-    //     {
-    //         id: 6,
-    //         questions: [
-    //             `I agree to metaguild building a metaverse`,
-    //             `I disagree to metaguild building a metaverse`,
-    //             `Let’s build one but on private beta`
-    //         ]
-    //     }
-    // ];
+// proposals = [
+//     {
+//         id: 6,
+//         questions: [
+//             `I agree to metaguild building a metaverse`,
+//             `I disagree to metaguild building a metaverse`,
+//             `Let’s build one but on private beta`
+//         ]
+//     }
+// ];

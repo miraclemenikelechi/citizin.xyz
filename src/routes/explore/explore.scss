@@ -1,6 +1,5 @@
 @import "../../index.scss";
 
-
 .explore {
     position: absolute;
     right: 0;
@@ -8,17 +7,17 @@
     width: calc(100% - 360px);
     height: 95vh;
 
-    >div {
+    > div {
         padding: 5px 50px 50px 50px;
 
-        >div {
+        > div {
             @include flex;
 
             &.top {
                 justify-content: space-between;
                 gap: 1.25rem;
 
-                >span {
+                > span {
                     @include equal(50px);
                     @include flex;
                 }
@@ -36,13 +35,13 @@
                     font-weight: 600;
                     font-size: 1.375rem;
                     @include flex;
-                    gap: .75rem;
-                    transition: .25s ease-in-out all;
+                    gap: 0.75rem;
+                    transition: 0.25s ease-in-out all;
 
                     &:hover {
                         cursor: pointer;
                         text-decoration: underline;
-                        gap: .5rem;
+                        gap: 0.5rem;
                     }
 
                     span {
@@ -61,21 +60,21 @@
                 grid-column-gap: 50px;
                 place-items: center;
 
-                .card>a {
+                .card > a {
                     height: 220px;
                     width: min(100%, 455px);
                     padding: 1.25rem;
                     background: hwb(0 100% 0%);
                     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-                    border-radius: .625rem;
-                    @include flex($direction:column);
+                    border-radius: 0.625rem;
+                    @include flex($direction: column);
                     transition: ease-in-out all 150ms;
 
                     &:hover {
-                        scale: 1.05
+                        scale: 1.05;
                     }
 
-                    >div {
+                    > div {
                         @include flex;
                         width: 100%;
 
@@ -106,7 +105,7 @@
                                     background-color: hwb(201 88% 0%);
                                     text-transform: capitalize;
                                     font-weight: 500;
-                                    font-size: .5625rem;
+                                    font-size: 0.5625rem;
                                     border-radius: 5px;
                                 }
                             }
@@ -115,9 +114,9 @@
                         &.center {
                             flex-direction: column;
                             align-items: flex-start;
-                            gap: .625rem;
+                            gap: 0.625rem;
 
-                            >span {
+                            > span {
                                 font-family: $syne;
                                 font-weight: 500;
 
@@ -127,7 +126,7 @@
                                 }
 
                                 &:last-of-type {
-                                    font-size: .75rem;
+                                    font-size: 0.75rem;
                                     color: hwb(0 62% 38%);
                                     overflow: hidden;
                                     text-overflow: ellipsis;
@@ -144,18 +143,18 @@
                         }
 
                         &.bottom {
-                            margin-top: .625rem;
+                            margin-top: 0.625rem;
                             flex-direction: column;
-                            gap: .625rem;
+                            gap: 0.625rem;
 
-                            >div {
+                            > div {
                                 @include flex;
                                 width: 100%;
 
                                 &:first-of-type {
-                                    height: .2rem;
+                                    height: 0.2rem;
                                     background-color: hwb(0 95% 5%);
-                                    border-radius: .3125rem;
+                                    border-radius: 0.3125rem;
                                     overflow: hidden;
                                     justify-content: flex-start;
 
@@ -188,16 +187,16 @@
                                     .left {
                                         margin-right: auto;
                                         @include flex;
-                                        gap: .625rem;
+                                        gap: 0.625rem;
 
                                         span {
-                                            @include flex($justify:flex-start);
+                                            @include flex($justify: flex-start);
                                             font-size: 1rem;
                                             color: hwb(0 62% 38%);
                                             font-family: $axiforma;
                                             font-weight: 400;
                                             text-transform: capitalize;
-                                            gap: .25rem;
+                                            gap: 0.25rem;
 
                                             b {
                                                 font-family: $axiforma;

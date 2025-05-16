@@ -1,5 +1,4 @@
 const ShortenText = ({ word, length }) => {
-
     const Shortner = ({ text, maxCharacters, ellipsis }) => {
         if (text.length <= maxCharacters) {
             return <div>{text}</div>;
@@ -18,9 +17,7 @@ const ShortenText = ({ word, length }) => {
         );
     };
 
-    return (
-        <Shortner text={word} maxCharacters={length} />
-    );
+    return <Shortner text={word} maxCharacters={length} />;
 };
 
 export default ShortenText;

@@ -1,53 +1,52 @@
 import "./top-nav.scss";
 import { Link } from "react-router-dom";
-import { DashboardIcon, Logo, NavDropDown} from "../../assets/icons/";
-
+import { DashboardIcon, Logo, NavDropDown } from "../../assets/icons/";
 
 const TopNav = () => {
-    const
-
-        NavbarLink = ({ to, children }) => {
+    const NavbarLink = ({ to, children }) => {
             return (
                 <Link to={to}>
                     <span>{children}</span>
-                    <span><NavDropDown /></span>
+                    <span>
+                        <NavDropDown />
+                    </span>
                 </Link>
             );
         },
-
         links = [
             { to: "/", text: "all proposals" },
             { to: "/", text: "all DAO's" },
             { to: "/", text: "delegations" },
         ];
 
-
-
     return (
         <section className="topNav">
             <div>
-
                 <div className="logo">
                     <Link>
-                        <span><Logo /></span>
+                        <span>
+                            <Logo />
+                        </span>
                         <span>citizin</span>
                     </Link>
                 </div>
 
                 <nav>
-                    {
-                        links.map((link, index) => {
-                            const { to, text } = link;
-                            return (
-                                <NavbarLink key={index} to={to}>{text}</NavbarLink>
-                            );
-                        })
-                    }
+                    {links.map((link, index) => {
+                        const { to, text } = link;
+                        return (
+                            <NavbarLink key={index} to={to}>
+                                {text}
+                            </NavbarLink>
+                        );
+                    })}
                 </nav>
 
                 <div className="right">
                     <button>
-                        <span><DashboardIcon /> </span>
+                        <span>
+                            <DashboardIcon />{" "}
+                        </span>
                         <span>dashboard</span>
                     </button>
 
@@ -68,7 +67,6 @@ const TopNav = () => {
                         </span>
                     </div>
                 </div>
-
             </div>
         </section>
     );

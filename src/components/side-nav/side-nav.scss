@@ -1,6 +1,5 @@
 @import "../../index.scss";
 
-
 .sideNav {
     width: 360px;
     position: fixed;
@@ -11,9 +10,9 @@
     z-index: -1;
     background-color: white;
 
-    >div {
+    > div {
         padding: 50px;
-        @include flex($direction:column);
+        @include flex($direction: column);
         gap: 1.875rem;
 
         @include breakpoint-max(1300px) {
@@ -21,7 +20,7 @@
         }
 
         .top {
-            @include flex($direction:column, $align:flex-start);
+            @include flex($direction: column, $align: flex-start);
             width: 100%;
             gap: 1.5rem;
 
@@ -40,8 +39,8 @@
                 }
             }
 
-            >div {
-                @include flex($direction:column, $align:flex-start);
+            > div {
+                @include flex($direction: column, $align: flex-start);
                 gap: 1.5rem;
                 width: 100%;
 
@@ -50,7 +49,7 @@
                     gap: 1.25rem;
                     width: inherit;
 
-                    >span {
+                    > span {
                         @include flex;
 
                         &:first-of-type {
@@ -68,11 +67,11 @@
                     }
 
                     div {
-                        @include flex($direction:column, $align:flex-start);
-                        gap: .3125rem;
+                        @include flex($direction: column, $align: flex-start);
+                        gap: 0.3125rem;
 
                         span {
-                            @include flex($justify:flex-start);
+                            @include flex($justify: flex-start);
 
                             &:first-of-type {
                                 font-family: $syne;
@@ -84,7 +83,7 @@
                             &:last-of-type {
                                 font-family: $poppins;
                                 font-weight: 500;
-                                font-size: .75rem;
+                                font-size: 0.75rem;
                                 color: hwb(0 39% 61%);
                             }
                         }
@@ -97,7 +96,7 @@
             border-color: hwb(0 85% 15% / 0.63);
             width: 100%;
             height: 1px;
-            opacity: .25;
+            opacity: 0.25;
         }
 
         .bottom {
@@ -111,11 +110,11 @@
 
             ul {
                 list-style: none;
-                @include flex($direction:column, $align:flex-start);
+                @include flex($direction: column, $align: flex-start);
                 gap: 1.75rem;
 
-                li>a {
-                    @include flex($justify:flex-start);
+                li > a {
+                    @include flex($justify: flex-start);
                     gap: 1.25rem;
                     color: hwb(0 62% 38%);
                     position: relative;

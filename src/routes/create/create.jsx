@@ -1,20 +1,16 @@
-import { CreateProposal, ToggleOff, ToggleOn } from '../../assets/icons';
-import './create.scss';
+import { CreateProposal, ToggleOff, ToggleOn } from "../../assets/icons";
+import "./create.scss";
 
 // import { useForm } from "react-hook-form";
-import { useState } from 'react';
+import { useState } from "react";
 
 const Create = () => {
     // console.log(useForm());
 
-
     // const { register, control } = useForm();
 
-    const
-        [activated, setActivated] = useState(false),
-
+    const [activated, setActivated] = useState(false),
         [request, setRequest] = useState({
-
             // questions
             q1: "",
             q2: "",
@@ -37,30 +33,41 @@ const Create = () => {
             end_m: "",
             end_y: "",
         }),
-
         handleChange = (event) => {
-            const { name, value, checked, type, } = event.target;
+            const { name, value, checked, type } = event.target;
             setRequest(function (previous) {
-                return ({
+                return {
                     ...previous,
                     [name]: type === "checkbox" ? checked : value,
-                });
+                };
             });
         };
 
-    const { q1, q2, q3, e1, e2, e3, address, start_d, start_m, start_y, end_d, end_m, end_y } = request;
-
-    
+    const {
+        q1,
+        q2,
+        q3,
+        e1,
+        e2,
+        e3,
+        address,
+        start_d,
+        start_m,
+        start_y,
+        end_d,
+        end_m,
+        end_y,
+    } = request;
 
     return (
         <section className="create">
             <div>
                 <div className="top">
-                    <span><CreateProposal /></span>
+                    <span>
+                        <CreateProposal />
+                    </span>
 
-                    <h2>
-                        Create proposal
-                    </h2>
+                    <h2>Create proposal</h2>
 
                     <div>
                         <span>activate</span>
@@ -73,13 +80,10 @@ const Create = () => {
 
                 <div className="bottom">
                     <article>
-
                         <div>
                             <span>image</span>
 
-                            <h5>
-                                playtest feedback
-                            </h5>
+                            <h5>playtest feedback</h5>
                         </div>
 
                         <span>
@@ -93,7 +97,7 @@ const Create = () => {
                         </span>
                         <span>
                             <input
-                                name='q2'
+                                name="q2"
                                 value={q2}
                                 type="text"
                                 onChange={handleChange}
@@ -102,18 +106,17 @@ const Create = () => {
                         </span>
                         <span>
                             <input
-                                name='q3'
+                                name="q3"
                                 value={q3}
                                 type="text"
                                 onChange={handleChange}
-                                placeholder="The game should be launched but in private beta" />
+                                placeholder="The game should be launched but in private beta"
+                            />
                         </span>
                     </article>
 
                     <article>
-                        <h5>
-                            eligibility
-                        </h5>
+                        <h5>eligibility</h5>
 
                         <div>
                             <input
@@ -142,12 +145,13 @@ const Create = () => {
 
                     <article>
                         <h5>
-                            Provide token Contract address below to authenticate each holder, if it’s a criteria  to vote
+                            Provide token Contract address below to authenticate
+                            each holder, if it’s a criteria to vote
                         </h5>
 
                         <input
                             type="text"
-                            name='address'
+                            name="address"
                             value={address}
                             onChange={handleChange}
                             placeholder="Contract address"
@@ -159,20 +163,24 @@ const Create = () => {
                             <h5>start date</h5>
 
                             <div>
-                                <input type="text"
-                                    placeholder='dd'
-                                    name='start_d'
+                                <input
+                                    type="text"
+                                    placeholder="dd"
+                                    name="start_d"
                                     value={start_d}
-                                    onChange={handleChange} />
-                                /
-                                <input type="text"
-                                    placeholder='mm'
-                                    name='start-month'
+                                    onChange={handleChange}
                                 />
                                 /
-                                <input type="text"
-                                    placeholder='yy'
-                                    name='start-year'
+                                <input
+                                    type="text"
+                                    placeholder="mm"
+                                    name="start-month"
+                                />
+                                /
+                                <input
+                                    type="text"
+                                    placeholder="yy"
+                                    name="start-year"
                                 />
                             </div>
                         </div>
@@ -181,11 +189,11 @@ const Create = () => {
                             <h5>end date</h5>
 
                             <div>
-                                <input type="text" placeholder='dd' />
+                                <input type="text" placeholder="dd" />
                                 /
-                                <input type="text" placeholder='mm' />
+                                <input type="text" placeholder="mm" />
                                 /
-                                <input type="text" placeholder='yy' />
+                                <input type="text" placeholder="yy" />
                             </div>
                         </div>
                     </article>

@@ -1,6 +1,5 @@
 @import "../../index.scss";
 
-
 .vote {
     position: absolute;
     right: 0;
@@ -8,12 +7,12 @@
     width: calc(100% - 360px);
     height: 80vh;
 
-    >div {
+    > div {
         padding: 1.25rem;
-        @include flex($direction:column);
+        @include flex($direction: column);
         gap: 34px;
 
-        >div {
+        > div {
             width: 100%;
             @include flex;
 
@@ -22,7 +21,7 @@
                 gap: 1.25rem;
                 padding-inline: 5%;
 
-                span>a {
+                span > a {
                     @include flex;
                 }
 
@@ -43,14 +42,14 @@
                 width: 85%;
                 gap: 1.875rem;
 
-                >div {
+                > div {
                     @include flex;
                     width: 100%;
 
                     &.top {
                         justify-content: space-between;
 
-                        >div {
+                        > div {
                             @include flex;
 
                             &.left {
@@ -74,7 +73,7 @@
                                 text-transform: capitalize;
                                 gap: 1.5rem;
 
-                                >span {
+                                > span {
                                     font-family: $axiforma;
 
                                     &:first-of-type {
@@ -118,7 +117,10 @@
                     &.center {
                         ul {
                             list-style: none;
-                            @include flex($direction: column, $align:flex-start);
+                            @include flex(
+                                $direction: column,
+                                $align: flex-start
+                            );
                             width: 100%;
                             gap: 3rem;
 
@@ -126,11 +128,11 @@
                                 width: 100%;
 
                                 label {
-                                    @include flex($justify:flex-start);
+                                    @include flex($justify: flex-start);
                                     gap: 30px;
                                     min-width: 100%;
 
-                                    >span {
+                                    > span {
                                         @include equal(45px);
                                         @include flex;
                                         position: relative;
@@ -138,7 +140,7 @@
                                         input {
                                             display: none;
 
-                                            &:checked~svg:first-of-type {
+                                            &:checked ~ svg:first-of-type {
                                                 display: block;
                                             }
                                         }
@@ -153,14 +155,20 @@
                                         }
                                     }
 
-                                    >div {
-                                        @include flex($direction:column, $justify:space-between, $align:flex-start);
+                                    > div {
+                                        @include flex(
+                                            $direction: column,
+                                            $justify: space-between,
+                                            $align: flex-start
+                                        );
                                         gap: 1rem;
                                         width: 100%;
 
                                         .top {
                                             width: 100%;
-                                            @include flex($justify:space-between);
+                                            @include flex(
+                                                $justify: space-between
+                                            );
 
                                             span {
                                                 font-size: 1rem;
@@ -177,7 +185,9 @@
 
                                                     b {
                                                         font-weight: 600;
-                                                        color: hwb(0 16% 84% / 0.9);
+                                                        color: hwb(
+                                                            0 16% 84% / 0.9
+                                                        );
                                                         padding-right: 2.5px;
                                                     }
                                                 }
@@ -187,13 +197,20 @@
                                         .bottom {
                                             height: 12px;
                                             width: 100%;
-                                            background: rgba(187, 193, 196, 0.2);
+                                            background: rgba(
+                                                187,
+                                                193,
+                                                196,
+                                                0.2
+                                            );
                                             border-radius: 26px;
 
-                                            >span {
-                                                @include flex ($justify:flex-start);
+                                            > span {
+                                                @include flex(
+                                                    $justify: flex-start
+                                                );
                                                 border-radius: inherit;
-                                                @include equal (100%);
+                                                @include equal(100%);
 
                                                 span {
                                                     height: 100%;
@@ -212,7 +229,7 @@
                         margin-top: 20px;
                         gap: 45px;
 
-                        >div {
+                        > div {
                             background: rgba(187, 193, 196, 0.2);
                             border-radius: 26px;
                             width: 100%;
@@ -244,7 +261,7 @@
                             height: 65px;
                             outline: none;
                             border: none;
-                            
+
                             a {
                                 @include flex;
                                 @include equal(100%);

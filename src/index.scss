@@ -1,90 +1,89 @@
-$breakpoints: ("mobile": 250px, "mini-tablet": 481px, "tablet": 768px, "laptop": 1024px, "tv": 1280px, "uhd4k": 1300px);
+$breakpoints: (
+    "mobile": 250px,
+    "mini-tablet": 481px,
+    "tablet": 768px,
+    "laptop": 1024px,
+    "tv": 1280px,
+    "uhd4k": 1300px,
+);
 
 @mixin mobile {
     @media (min-width: map-get($breakpoints, "mobile")) {
-        @content
+        @content;
     }
 }
 
-$mobile:map-get($breakpoints, "mobile");
+$mobile: map-get($breakpoints, "mobile");
 // <============= breakpoint ==============>
 
 @mixin mini-tablet {
     @media (min-width: map-get($breakpoints, "mini-tablet")) {
-        @content
+        @content;
     }
 }
 
-$mini-tablet:map-get($breakpoints, "mini-tablet");
+$mini-tablet: map-get($breakpoints, "mini-tablet");
 // <============= breakpoint ==============>
 
 @mixin tablet {
     @media (min-width: map-get($breakpoints, "tablet")) {
-        @content
+        @content;
     }
 }
 
-$tablet:map-get($breakpoints, "tablet");
+$tablet: map-get($breakpoints, "tablet");
 // <============= breakpoint ==============>
 
 @mixin laptop {
     @media (min-width: map-get($breakpoints, "laptop")) {
-        @content
+        @content;
     }
 }
 
-$laptop:map-get($breakpoints, "laptop");
+$laptop: map-get($breakpoints, "laptop");
 // <============= breakpoint ==============>
 
 @mixin tv {
     @media (min-width: map-get($breakpoints, "tv")) {
-        @content
+        @content;
     }
 }
 
-$tv:map-get($breakpoints, "tv");
+$tv: map-get($breakpoints, "tv");
 // <============= breakpoint ==============>
 
 @mixin uhd4k {
     @media (min-width: map-get($breakpoints, "uhd4k")) {
-        @content
+        @content;
     }
 }
 
-$uhd4k:map-get($breakpoints, "uhd4k");
+$uhd4k: map-get($breakpoints, "uhd4k");
 // <============= breakpoint ==============>
 
-@mixin breakpoint-max($bp:0) {
+@mixin breakpoint-max($bp: 0) {
     @media (max-width: $bp) {
-        @content
+        @content;
     }
 }
 
-;
-
-@mixin breakpoint-min($bp:0) {
+@mixin breakpoint-min($bp: 0) {
     @media (min-width: $bp) {
-        @content
+        @content;
     }
 }
 
-;
-
-@mixin flex($align:center, $direction:row, $justify:center) {
+@mixin flex($align: center, $direction: row, $justify: center) {
     display: flex;
     align-items: $align;
     justify-content: $justify;
     flex-direction: $direction;
 }
 
-;
-
-@mixin equal($h-w:0) {
+@mixin equal($h-w: 0) {
     height: $h-w;
     width: $h-w;
 }
-
-;
 
 :root {
     --background: hwb(0 95% 5%);
@@ -97,16 +96,10 @@ $uhd4k:map-get($breakpoints, "uhd4k");
     src: url("./assets/fonts/axiforma/Kastelov\ -\ Axiforma\ Book.otf");
 }
 
-
-$axiforma:'Axiforma',
-sans-serif;
-$poppins: 'Poppins',
-sans-serif;
-$syne:'Syne',
-sans-serif;
-$zen: 'Zen Dots',
-cursive;
-
+$axiforma: "Axiforma", sans-serif;
+$poppins: "Poppins", sans-serif;
+$syne: "Syne", sans-serif;
+$zen: "Zen Dots", cursive;
 
 * {
     margin: 0%;

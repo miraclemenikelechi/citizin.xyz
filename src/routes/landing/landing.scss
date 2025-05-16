@@ -1,17 +1,16 @@
 @import "../../index.scss";
 
-
 .landing {
     font-family: $syne;
 
     .navigation {
-        @include flex($justify:space-between);
+        @include flex($justify: space-between);
         height: 80px;
         padding-inline: 5%;
 
         .logo {
             @include flex;
-            gap: .5rem;
+            gap: 0.5rem;
 
             span {
                 &:last-of-type {
@@ -51,11 +50,17 @@
                 border-radius: 2.125rem;
                 border: 1px solid black;
                 outline: none;
+                cursor: pointer;
+                transition: all 0.15s ease;
 
                 span {
                     font-family: $syne;
                     font-size: 18px;
                     font-weight: 700;
+                }
+
+                &:active {
+                    scale: 0.95;
                 }
             }
         }
@@ -75,7 +80,7 @@
                 width: min(100%, 1488px);
                 z-index: -1;
                 margin-top: 86px;
-                opacity: .25;
+                opacity: 0.25;
 
                 figure {
                     --border-width: 2px;
@@ -84,9 +89,11 @@
                     position: inherit;
                     @include flex;
                     border-radius: var(--border-radius);
-                    background: linear-gradient(180deg,
-                            hwb(0 0% 100% / 0.15) 0%,
-                            hwb(0 0% 100% / 0) 100%);
+                    background: linear-gradient(
+                        180deg,
+                        hwb(0 0% 100% / 0.15) 0%,
+                        hwb(0 0% 100% / 0) 100%
+                    );
 
                     &::after {
                         content: "";
@@ -97,7 +104,9 @@
                         background-color: var(--background);
                         height: calc(100% - calc(var(--border-width)) * 2);
                         width: calc(100% - calc(var(--border-width)) * 2);
-                        border-radius: calc(var(--border-radius) - var(--border-width));
+                        border-radius: calc(
+                            var(--border-radius) - var(--border-width)
+                        );
                     }
 
                     &:nth-of-type(1) {
@@ -116,7 +125,6 @@
                 }
             }
 
-
             &.content {
                 flex-direction: column;
                 gap: 5.9375rem;
@@ -127,12 +135,14 @@
                     font-size: 3.4375rem;
                     width: 1265px;
                     text-align: center;
-                    background: linear-gradient(116.65deg,
-                            hwb(100 56% 10%) 33.29%,
-                            hwb(81 54% 10% / 0.82) 53.05%,
-                            hwb(236 52% 0%) 79.23%,
-                            hwb(69 46% 15% / 0) 116.48%,
-                            hwb(237 54% 14%) 116.48%);
+                    background: linear-gradient(
+                        116.65deg,
+                        hwb(100 56% 10%) 33.29%,
+                        hwb(81 54% 10% / 0.82) 53.05%,
+                        hwb(236 52% 0%) 79.23%,
+                        hwb(69 46% 15% / 0) 116.48%,
+                        hwb(237 54% 14%) 116.48%
+                    );
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     background-clip: text;
@@ -159,7 +169,7 @@
                         }
 
                         span {
-                            transition: all .5s ease;
+                            transition: all 0.5s ease;
                             border-radius: inherit;
                             @include equal(inherit);
                             @include flex;
@@ -243,8 +253,8 @@
             }
         }
 
-        >div {
-            @include flex($direction:column);
+        > div {
+            @include flex($direction: column);
             gap: 2.5rem;
 
             button {
@@ -273,7 +283,7 @@
 
                 &:hover::after {
                     scale: 20;
-                    transition: .5s;
+                    transition: 0.5s;
                     opacity: 1;
                 }
 
@@ -300,7 +310,7 @@
                     height: 100%;
                     width: 25%;
                     background-color: transparent;
-                    opacity: .5;
+                    opacity: 0.5;
                     cursor: pointer;
 
                     &:first-of-type {
@@ -330,7 +340,7 @@
                 }
             }
 
-            >div {
+            > div {
                 @include flex;
                 gap: 1rem;
 

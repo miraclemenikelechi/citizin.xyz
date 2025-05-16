@@ -1,15 +1,12 @@
-import { ArrowRight, CommunityIcon } from '../../assets/icons';
+import { ArrowRight, CommunityIcon } from "../../assets/icons";
 import { communities } from "../../assets/data";
-import './community.scss';
-
+import "./community.scss";
 
 const Community = () => {
-    const
-        TOTAL_DAO = 540,
-
+    const TOTAL_DAO = 540,
         Dao = ({ img, title, comment, members }) => {
             return (
-                <article className='dao'>
+                <article className="dao">
                     <div>
                         <img src={img} />
                     </div>
@@ -20,7 +17,9 @@ const Community = () => {
                     </div>
 
                     <div>
-                        <span><CommunityIcon /></span>
+                        <span>
+                            <CommunityIcon />
+                        </span>
                         <span>{members}</span>
                         members
                     </div>
@@ -39,18 +38,16 @@ const Community = () => {
 
                     <div>
                         <span>view all</span>
-                        <span><ArrowRight /></span>
+                        <span>
+                            <ArrowRight />
+                        </span>
                     </div>
                 </div>
 
                 <div className="bottom">
-                    {
-                        communities.map((dao) => {
-                            return (
-                                <Dao key={dao.id} {...dao} />
-                            );
-                        })
-                    }
+                    {communities.map((dao) => {
+                        return <Dao key={dao.id} {...dao} />;
+                    })}
                 </div>
             </div>
         </section>

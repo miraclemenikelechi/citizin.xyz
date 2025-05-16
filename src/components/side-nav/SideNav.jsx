@@ -1,156 +1,159 @@
-import './side-nav.scss';
-import { Trending, Proposal, ProposalDropdown, CreateProposal, PastProposal, ActiveProposal, Analytics, DAO, VoteGraph, Community, CreateDAO, Other } from '../../assets/icons';
+import "./side-nav.scss";
+import {
+    Trending,
+    Proposal,
+    ProposalDropdown,
+    CreateProposal,
+    PastProposal,
+    ActiveProposal,
+    Analytics,
+    DAO,
+    VoteGraph,
+    Community,
+    CreateDAO,
+    Other,
+} from "../../assets/icons";
 import { NavLink } from "react-router-dom";
 
 const SideNav = () => {
-
-    const
-
-        chains = [
+    const chains = [
             {
                 name: "moonbeam",
                 members: 954,
-                img: "/moonbeam.jpg"
+                img: "/moonbeam.jpg",
             },
             {
                 name: "chainlink",
                 members: 600,
-                img: "/chainlink.png"
+                img: "/chainlink.png",
             },
             {
                 name: "BNB chain",
                 members: 430,
-                img: "/bnb.png"
+                img: "/bnb.png",
             },
             {
                 name: "multichain",
                 members: 416,
-                img: "/multidao.png"
+                img: "/multidao.png",
             },
             {
                 name: "wireshape",
                 members: 317,
-                img: "/wireshape.png"
+                img: "/wireshape.png",
             },
         ],
-
         navLinks = [
             {
                 to: "/explore",
                 text: `all proposals`,
                 icon: <Proposal />,
-                side: < ProposalDropdown />
+                side: <ProposalDropdown />,
             },
             {
                 to: "/create",
                 text: `create proposal`,
-                icon: <CreateProposal />
+                icon: <CreateProposal />,
             },
             {
                 to: "/past",
                 text: `past proposals`,
-                icon: <PastProposal />
+                icon: <PastProposal />,
             },
             {
                 to: "/active",
                 text: `active proposals`,
-                icon: <ActiveProposal />
+                icon: <ActiveProposal />,
             },
             {
                 to: "/analytics",
                 text: `analytics`,
-                icon: <Analytics />
+                icon: <Analytics />,
             },
             {
                 to: "/dao",
                 text: `DAO metrics`,
-                icon: <DAO />
+                icon: <DAO />,
             },
             {
                 to: "/graph",
                 text: `vote graph`,
-                icon: <VoteGraph />
+                icon: <VoteGraph />,
             },
             {
                 to: "/communities",
                 text: `community`,
-                icon: <Community />
+                icon: <Community />,
             },
             {
                 to: "/create-dao",
                 text: `create DAO`,
-                icon: <CreateDAO />
+                icon: <CreateDAO />,
             },
             {
                 to: "/other",
                 text: `other`,
-                icon: <Other />
+                icon: <Other />,
             },
         ];
-
-
 
     return (
         <section className="sideNav">
             <div>
-
-                <section className='top'>
+                <section className="top">
                     <h4>
-                        <span><Trending /></span>
+                        <span>
+                            <Trending />
+                        </span>
                         <span>top communities</span>
                     </h4>
 
                     <div>
-                        {
-                            chains.map((chain, index) => {
-                                const { name, members, img } = chain;
+                        {chains.map((chain, index) => {
+                            const { name, members, img } = chain;
 
-                                return (
-                                    <div className='chain' key={index}>
-                                        <span>
-                                            <img src={img} />
-                                        </span>
+                            return (
+                                <div className="chain" key={index}>
+                                    <span>
+                                        <img src={img} />
+                                    </span>
 
-                                        <div>
-                                            <span>{name}</span>
-                                            <span>{members} members</span>
-                                        </div>
-
-                                        <span>
-                                            <span>#</span>
-                                            <span>{index + 1}</span>
-                                        </span>
+                                    <div>
+                                        <span>{name}</span>
+                                        <span>{members} members</span>
                                     </div>
-                                );
-                            })
-                        }
+
+                                    <span>
+                                        <span>#</span>
+                                        <span>{index + 1}</span>
+                                    </span>
+                                </div>
+                            );
+                        })}
                     </div>
                 </section>
 
                 <hr />
 
-                <section className='bottom'>
+                <section className="bottom">
                     <ul>
-                        {
-                            navLinks.map((link, index) => {
-                                const { to, text, icon, side } = link;
+                        {navLinks.map((link, index) => {
+                            const { to, text, icon, side } = link;
 
-                                return (
-                                    <li key={index}>
-                                        <NavLink to={to}>
-                                            <span>{icon}</span>
+                            return (
+                                <li key={index}>
+                                    <NavLink to={to}>
+                                        <span>{icon}</span>
 
-                                            <span>{text}</span>
+                                        <span>{text}</span>
 
-                                            {side && <span>{side}</span>}
-                                        </NavLink>
-                                    </li>
-                                );
-                            })
-                        }
+                                        {side && <span>{side}</span>}
+                                    </NavLink>
+                                </li>
+                            );
+                        })}
                     </ul>
                 </section>
-
             </div>
         </section>
     );

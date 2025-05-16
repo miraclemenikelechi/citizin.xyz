@@ -6,75 +6,75 @@ import { MainUI, Scroll } from "./utils";
 import Media from "react-media";
 
 function App() {
-	const UiLayout = () => {
-			return (
-				<>
-					<Scroll />
-					<MainUI />
-					<Outlet />
-				</>
-			);
-		},
-		router = createBrowserRouter([
-			{
-				path: "/",
-				element: <Landing />,
-			},
+    const UiLayout = () => {
+            return (
+                <>
+                    <Scroll />
+                    <MainUI />
+                    <Outlet />
+                </>
+            );
+        },
+        router = createBrowserRouter([
+            {
+                path: "/",
+                element: <Landing />,
+            },
 
-			{
-				path: "/",
-				element: <UiLayout />,
-				children: [
-					{
-						path: "/explore",
-						element: <Explore />,
-					},
-					{
-						path: "create",
-						element: <Create />,
-					},
-					{
-						path: "/active/vote/:id",
-						element: <Vote />,
-					},
+            {
+                path: "/",
+                element: <UiLayout />,
+                children: [
+                    {
+                        path: "/explore",
+                        element: <Explore />,
+                    },
+                    {
+                        path: "create",
+                        element: <Create />,
+                    },
+                    {
+                        path: "/active/vote/:id",
+                        element: <Vote />,
+                    },
 
-					{
-						path: "/past/vote/:id",
-						element: <Vote />,
-					},
+                    {
+                        path: "/past/vote/:id",
+                        element: <Vote />,
+                    },
 
-					{
-						path: `/communities`,
-						element: <Community />,
-					},
-				],
-			},
+                    {
+                        path: `/communities`,
+                        element: <Community />,
+                    },
+                ],
+            },
 
-			{
-				path: "*",
-				element: <Error />,
-			},
-		]);
+            {
+                path: "*",
+                element: <Error />,
+            },
+        ]);
 
-	return (
-		<>
-			<Web3Auth>
-				<Media query={`(min-width:768px)`}>
-					{(matches) => {
-						return matches ? (
-							<section className="container">
-								<RouterProvider router={router} />
-							</section>
-						) : (
-							<section className="query">
-								<Error />
-							</section>
-						);
-					}}
-				</Media>
-			</Web3Auth>
-		</>
-	);
+    return (
+        <>
+            <Web3Auth>
+                <Media query={`(min-width:768px)`}>
+                    {(matches) => {
+                        return matches ? (
+                            <section className="container">
+                                <RouterProvider router={router} />
+                            </section>
+                        ) : (
+                            <section className="query">
+                                <Error />
+                            </section>
+                        );
+                    }}
+                </Media>
+            </Web3Auth>
+        </>
+    );
 }
 
 export default App;
